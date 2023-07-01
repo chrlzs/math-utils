@@ -157,4 +157,38 @@ class MathUtils {
   static map(value, inMin, inMax, outMin, outMax) {
     return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
   }
+
+  // Physics functions
+  static calculateForce(mass, acceleration) {
+    return mass * acceleration;
+  }
+
+  static calculateAcceleration(force, mass) {
+    return force / mass;
+  }
+
+  static calculateVelocity(initialVelocity, acceleration, time) {
+    return initialVelocity + acceleration * time;
+  }
+
+  static calculateDisplacement(initialVelocity, acceleration, time) {
+    return initialVelocity * time + 0.5 * acceleration * Math.pow(time, 2);
+  }
+
+  static calculateWork(force, displacement, angle) {
+    const theta = MathUtils.degreesToRadians(angle);
+    return force * displacement * Math.cos(theta);
+  }
+
+  static calculatePower(work, time) {
+    return work / time;
+  }
+
+  static calculateKineticEnergy(mass, velocity) {
+    return 0.5 * mass * Math.pow(velocity, 2);
+  }
+
+  static calculatePotentialEnergy(mass, height, gravity = 9.8) {
+    return mass * gravity * height;
+  }
 }
