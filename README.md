@@ -18,3 +18,11 @@ isPrime(num): Checks if a number num is prime.
 fibonacci(n): Generates the Fibonacci sequence up to the nth term.
 
 nthRoot(number, root): Calculates the rootth root of a given number.
+
+degreesToRadians(degrees): Converts degrees to radians.
+
+radiansToDegrees(radians): Converts radians to degrees.
+
+clamp(value, min, max): Restricts a value within a specified range.
+
+map(value, inMin, inMax, outMin, outMax): Maps a value from one range to another.
